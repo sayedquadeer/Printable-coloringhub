@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Printable Coloring Hub - Free 50-Page Kids Coloring Books</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- jsPDF Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">🎨 Printable <span>Coloring Hub</span></div>
+    <p class="tagline">Generate & Download Free 50-Page Kids Coloring Books Instantly!</p>
+  </header>
+
+  <main class="container">
+    <section class="controls-card">
+      <h2>Step 1: Customize Your eBook</h2>
+      
+      <div class="form-group">
+        <label for="bookTitle">Book Title:</label>
+        <input type="text" id="bookTitle" value="My Awesome World of Animals" placeholder="Enter book title..." />
+      </div>
+
+      <div class="form-group">
+        <label for="pageSize">Paper Size:</label>
+        <select id="pageSize">
+          <option value="a4">A4 (Global Standard)</option>
+          <option value="letter">US Letter (USA / Canada)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="themeSelect">Select Theme (50 Pages):</label>
+        <select id="themeSelect">
+          <option value="animals">🦁 Safari & Jungle Animals (50 Pages)</option>
+          <option value="dinos">🦖 Dinosaur Adventures (50 Pages)</option>
+          <option value="alphabets">🔤 Alphabet & Objects (50 Pages)</option>
+          <option value="space">🚀 Space & Ocean Explorers (50 Pages)</option>
+        </select>
+      </div>
+
+      <div class="btn-group">
+        <button id="generateBtn" onclick="generatePDF()">🚀 Generate 50-Page PDF</button>
+      </div>
+
+      <div id="statusMessage" class="status-box"></div>
+    </section>
+
+    <section class="preview-card">
+      <h2>Step 2: Sample Cover Preview</h2>
+      <div class="book-preview" id="bookPreview">
+        <div class="preview-header">
+          <h3 id="previewTitle">My Awesome World of Animals</h3>
+          <p>50 Ready-to-Color Pages inside!</p>
+        </div>
+        <div class="preview-canvas-box">
+          <svg viewBox="0 0 200 200" width="160" height="160">
+            <circle cx="100" cy="100" r="80" stroke="#333" stroke-width="4" fill="none"/>
+            <circle cx="70" cy="80" r="12" stroke="#333" stroke-width="3" fill="none"/>
+            <circle cx="130" cy="80" r="12" stroke="#333" stroke-width="3" fill="none"/>
+            <path d="M 60 130 Q 100 170 140 130" stroke="#333" stroke-width="4" fill="none"/>
+            <path d="M 100 95 L 100 115" stroke="#333" stroke-width="3" fill="none"/>
+          </svg>
+        </div>
+        <p class="preview-footer">High Resolution • Print Ready</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Printable Coloring Hub - Free Open-Source Kids Activity Generator</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
