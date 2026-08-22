@@ -3,98 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Printable Coloring Hub - Free 50-Page Kids Coloring Book Generator</title>
+  <meta name="description" content="Generate and download free printable 50-page kids coloring books in PDF format. Includes cute animals, dinosaurs, alphabets, and space adventures." />
   
-  <!-- Global SEO Long-Tail Keywords Target -->
-  <title>Free Printable 50-Page Kids Coloring Book Generator (PDF Download)</title>
-  <meta name="description" content="Generate and download free printable 50-page coloring book PDFs for toddlers, preschoolers, and kids. Instant A4 & US Letter format coloring pages with animals, dinosaurs, and alphabets." />
-  <meta name="keywords" content="free printable coloring book pdf 50 pages, kids coloring pages generator, printable animal coloring book for toddlers, dinosaur coloring pdf printable free, A4 coloring pages download" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://sayedquadeer.github.io/Printable-coloringhub/" />
-
-  <!-- Google Schema Markup for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Printable Coloring Hub",
-    "url": "https://sayedquadeer.github.io/Printable-coloringhub/",
-    "description": "Free open-source 50-page printable kids coloring book generator.",
-    "applicationCategory": "EducationalApplication",
-    "operatingSystem": "All"
-  }
-  </script>
-
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css" />
+  <!-- jsPDF Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
-  <header>
-    <div class="logo">🎨 Printable <span>Coloring Hub</span></div>
-    <p class="tagline">Generate & Download Free 50-Page Kids Coloring Books Instantly!</p>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-banner">
+    🎉 100% Free Printable Activity Worksheets • Instant PDF Download (50 Pages)
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-icon">🎨</span>
+      <span class="logo-text">Printable <span>Coloring Hub</span></span>
+    </div>
+    <div class="badge-tag">Kids Edition</div>
   </header>
 
-  <main class="container">
-    <section class="controls-card">
-      <h2>Step 1: Customize Your 50-Page eBook</h2>
+  <!-- Main Generator Container -->
+  <main class="main-container">
+    
+    <!-- Hero Title -->
+    <section class="hero-section">
+      <h1>Create & Download <span>50-Page Kids Coloring Books</span></h1>
+      <p>Customize your title, choose paper size, and download a ready-to-print HD activity book in seconds!</p>
+    </section>
+
+    <div class="generator-grid">
       
-      <div class="form-group">
-        <label for="bookTitle">Book Title:</label>
-        <input type="text" id="bookTitle" value="My Awesome World of Animals" placeholder="Enter book title..." />
-      </div>
-
-      <div class="form-group">
-        <label for="pageSize">Paper Size Format:</label>
-        <select id="pageSize">
-          <option value="a4">A4 Standard (UK, Europe, Asia, Australia)</option>
-          <option value="letter">US Letter (USA, Canada, Mexico)</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="themeSelect">Select Theme (50 Pages Set):</label>
-        <select id="themeSelect">
-          <option value="animals">🦁 Safari & Jungle Animals (50 Pages)</option>
-          <option value="dinos">🦖 Dinosaur Adventures (50 Pages)</option>
-          <option value="alphabets">🔤 Alphabet & Objects (50 Pages)</option>
-          <option value="space">🚀 Space & Ocean Explorers (50 Pages)</option>
-        </select>
-      </div>
-
-      <div class="btn-group">
-        <button id="generateBtn" onclick="generatePDF()">🚀 Download 50-Page PDF Book</button>
-      </div>
-
-      <div id="statusMessage" class="status-box"></div>
-    </section>
-
-    <section class="preview-card">
-      <h2>Step 2: Live Cover Preview</h2>
-      <div class="book-preview" id="bookPreview">
-        <div class="preview-header">
-          <h3 id="previewTitle">My Awesome World of Animals</h3>
-          <p>50 Ready-to-Color High-Quality Pages inside!</p>
+      <!-- Left Box: Controls -->
+      <div class="card control-card">
+        <div class="card-header">
+          <span class="step-num">1</span>
+          <h2>Customize Your Book</h2>
         </div>
-        <div class="preview-canvas-box">
-          <svg viewBox="0 0 200 200" width="160" height="160">
-            <circle cx="100" cy="100" r="80" stroke="#333" stroke-width="4" fill="none"/>
-            <circle cx="70" cy="80" r="12" stroke="#333" stroke-width="3" fill="none"/>
-            <circle cx="130" cy="80" r="12" stroke="#333" stroke-width="3" fill="none"/>
-            <path d="M 60 130 Q 100 170 140 130" stroke="#333" stroke-width="4" fill="none"/>
-            <path d="M 100 95 L 100 115" stroke="#333" stroke-width="3" fill="none"/>
-          </svg>
+
+        <div class="form-group">
+          <label for="bookTitle">🎯 Book Title</label>
+          <input type="text" id="bookTitle" value="My Cute Animal Friends" placeholder="e.g. My Magical Coloring World" />
         </div>
-        <p class="preview-footer">Print-Ready • High Resolution (300 DPI)</p>
+
+        <div class="form-group">
+          <label for="pageSize">📄 Paper Size Format</label>
+          <select id="pageSize">
+            <option value="a4">A4 Standard (UK, Europe, Asia, Australia)</option>
+            <option value="letter">US Letter (USA, Canada, Mexico)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="themeSelect">🎨 Select Theme (50 Pages Set)</label>
+          <select id="themeSelect">
+            <option value="animals">🦁 Jungle & Cute Animals (50 Pages)</option>
+            <option value="dinos">🦖 Dinosaur Adventures (50 Pages)</option>
+            <option value="alphabets">🔤 Alphabets & Objects (50 Pages)</option>
+            <option value="space">🚀 Space & Ocean Explorers (50 Pages)</option>
+          </select>
+        </div>
+
+        <div class="features-list">
+          <div class="feat-item">✓ 50 High-Resolution Pages</div>
+          <div class="feat-item">✓ Print-Ready Margins</div>
+          <div class="feat-item">✓ Standard A4 / Letter Fit</div>
+        </div>
+
+        <button id="generateBtn" class="primary-btn" onclick="generatePDF()">
+          <span>⚡ Download 50-Page PDF</span>
+        </button>
+
+        <div id="statusMessage" class="status-box"></div>
       </div>
-    </section>
+
+      <!-- Right Box: Interactive HD Live Preview -->
+      <div class="card preview-card">
+        <div class="card-header">
+          <span class="step-num">2</span>
+          <h2>Live HD Preview</h2>
+        </div>
+
+        <!-- Preview Page Tabs -->
+        <div class="preview-tabs">
+          <button class="tab-btn active" onclick="switchPreviewPage('cover')">Page 1 (Cover)</button>
+          <button class="tab-btn" onclick="switchPreviewPage('lion')">Page 2 (Cute Lion)</button>
+          <button class="tab-btn" onclick="switchPreviewPage('dino')">Page 3 (Dinosaur)</button>
+        </div>
+
+        <!-- Canvas Container -->
+        <div class="preview-canvas-wrapper">
+          <canvas id="previewCanvas" width="380" height="480"></canvas>
+        </div>
+
+        <p class="preview-note">✨ High-resolution vector outlines optimized for home printing!</p>
+      </div>
+
+    </div>
+
   </main>
 
-  <section style="max-width: 1000px; margin: 0 auto 2rem auto; padding: 0 1rem; color: #4a5568;">
-    <h3>Free Printable Kids Activity Books & Worksheets</h3>
-    <p>Welcome to Printable Coloring Hub. Generate 50-page custom coloring activity books in PDF format for preschools, home-schooling, and toddlers. Print instantly on home printers with standard A4 and US Letter sizes.</p>
+  <!-- SEO Footer Info Section -->
+  <section class="info-section">
+    <div class="info-container">
+      <h3>Free Printable Coloring Books for Toddlers & Preschoolers</h3>
+      <p>Printable Coloring Hub provides parents, teachers, and kids with instant access to high-quality 50-page coloring worksheets. Download custom activity PDFs formatted for standard home and school printers.</p>
+    </div>
   </section>
 
   <footer>
-    <p>© Printable Coloring Hub - Free Open-Source Kids Activity Generator</p>
+    <p>© 2026 Printable Coloring Hub • Open-Source Kids Activity Generator</p>
   </footer>
 
   <script src="script.js"></script>
